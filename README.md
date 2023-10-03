@@ -1,12 +1,14 @@
 # ESP32-two-servos-via-WiFi
-Control 2 servomotors over WiFi TCP with ESP32-WROVER-B and RoboRemo Joystick
+Control 2 servomotors over WiFi TCP with ESP32-WROVER-B and RoboRemo Joystick<br/>
+[![YouTube video: RoboRemo Joystick Controlling 2 servomotors over WiFi with esp32 WROVER-B](https://img.youtube.com/vi/TawC16QWf40/0.jpg)](https://www.youtube.com/shorts/TawC16QWf40)
 
 We used an ESP32-WROVER-B board, but other boards should work as well.<br/>
-Make sure to configure the PWM output pins according to your circuit. <br/>
-<code>const int servoPin[chCount] = {13, 12};</code><br/>
+The number of servos can be easily extended up to 10. Make sure to configure the PWM output pins according to your circuit. <br/>
+<code>const int chCount = 2;
+const int servoPin[chCount] = {13, 12};</code><br/>
 
-The ESP creates tis own WiFi Access Point named "mywifi" with password "qwerty123".<br/>
-Then it starts TCP Server on IP 192.168.0.1 port 8080.<br/>
+The ESP creates its own WiFi Access Point named <code>mywifi</code> with password <code>qwerty123</code>.<br/>
+Then it starts TCP Server on IP <code>192.168.0.1</code> port <code>8080</code>.<br/>
 
 ## Building the RoboRemo interface
 menu -> edit UI<br/>
